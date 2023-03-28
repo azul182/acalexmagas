@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Peso ideal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Selecione o peso" [(ngModel)]="peso">
+        <ion-select-option value="PesoP">0Kg a 5Kg</ion-select-option>
+        <ion-select-option value="PesoM">6Kg a 15Kg</ion-select-option>
+        <ion-select-option value="PesoG">Maior que 16Kg</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Selecione a distancia" [(ngModel)]="distancia">
+        <ion-select-option value="DistanciaP">0Km a 50Km</ion-select-option>
+        <ion-select-option value="DistanciaM">51km a 300Km</ion-select-option>
+        <ion-select-option value="DistanciaG">Maior que 301Km</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Selecione o tipo" [(ngModel)]="tipo">
+        <ion-select-option value="regular">Regular</ion-select-option>
+        <ion-select-option value="expresso">Expresso</ion-select-option>
+        <ion-select-option value="agendado">Agendado</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="btn()">Calcular</ion-button>
+</ion-content>
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col>Peso(KG)</ion-col>
+    <ion-col>Distância(KM)</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>1.5</ion-col>
+    <ion-col>2</ion-col>
+  </ion-row>
+</ion-grid>
+
+
